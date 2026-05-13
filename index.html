@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
+  <title>Reflex</title>
+</head>
+<body>
+  <div class="wrap">
+    <header class="topbar panel">
+      <div class="brand">
+        <h1>Reflex</h1>
+        <span>reaction game</span>
+      </div>
+
+
+    <!-- TIME -->
+      <div class="stats">
+        <div class="stat"><label>Score</label><strong id="score">0</strong></div>
+        <div class="stat"><label>Time</label><strong id="time">30</strong></div>
+        <div class="stat"><label>Best</label><strong id="best">0</strong></div>
+      </div>
+
+      <div class="time-control">
+      <button id="minus30" class="btn small">-30s</button>
+      <button id="minus1" class="btn small">-1</button>
+
+      <input id="timeInput" type="number" min="1" step="1" value="30">
+
+      <button id="plus1" class="btn small">+1</button>
+      <button id="plus30" class="btn small">+30s</button>
+    <!-- TIME -->
+     
+    </div>
+    </header>
+    
+     <!-- HERO -->
+    <section class="hero">
+      <div class="intro panel">
+        <div>
+          <div class="eyebrow">precision challenge</div>
+          <h2>CLICK FAST.<span>MOVE CLEAN.</span></h2>
+          <p>
+            Hit the glowing target as many times as possible before time runs out.
+            Every hit gives points, and the target gets faster as you progress.
+          </p>
+        </div>
+
+        <div class="controls">
+          <button id="startBtn" class="btn primary">Start Game</button>
+          <button id="pauseBtn" class="btn">Pause</button>
+          <button id="restartBtn" class="btn">Restart</button>
+        </div>
+      </div>
+
+      <div class="game-shell panel">
+        <div class="game-head">
+          <div class="mini">Arena</div>
+          <div class="mini" id="status">Ready</div>
+        </div>
+
+        <div class="arena" id="arena">
+          <div class="grid"></div>
+          <button class="target" id="target" aria-label="Target"></button>
+        </div>
+
+        <div class="hud">
+          <div class="hud-card">
+            <label>Hits</label>
+            <strong id="hits">0</strong>
+          </div>
+          <div class="hud-card">
+            <label>Combo</label>
+            <strong id="combo">x0</strong>
+          </div>
+          <div class="hud-card">
+            <label>Accuracy</label>
+            <strong id="accuracy">100%</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- HERO -->
+
+     <!-- FOOTER -->
+    <div class="footer">
+      <div>Space — start / restart</div>
+      <div>Click target to score</div>
+    </div>
+    <!-- FOOTER -->
+  </div>
+
+  <!-- OVERPLAY -->
+  <div class="overlay" id="overlay">
+    <div class="dialog">
+      <h3>Reflex</h3>
+      <p>
+        A quick reaction game.
+        Press start and chase the best score.
+      </p>
+      <button id="overlayStart" class="btn primary">Start Game</button>
+      <div class="tiny">Best score saves in your browser.</div>
+    </div>
+  </div>
+  <!-- OVERPLAY -->
+
+  <div class="toast" id="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>

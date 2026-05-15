@@ -137,3 +137,4 @@ https://click-game-drab.vercel.app/
 ![Gameplay](images/Game_over.png)
 
 Author : Baimyrzaev Aruubek
+Contact me : baymyrzaevaruubek10@gmail.com
